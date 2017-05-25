@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  # We shouldn't need this since we're all API responses
+  # protect_from_forgery with: :exception
 end

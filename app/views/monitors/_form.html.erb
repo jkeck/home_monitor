@@ -1,0 +1,17 @@
+<%= form_with(model: monitor, local: true) do |form| %>
+  <% if monitor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(monitor.errors.count, "error") %> prohibited this monitor from being saved:</h2>
+
+      <ul>
+      <% monitor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
