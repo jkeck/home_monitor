@@ -2,7 +2,7 @@ class MonitorsController < ApplicationController
   # GET /monitors
   # GET /monitors.json
   def index
-    @monitors = home_monitor.all
+    @monitors = home_monitor.line_chart_json.first # first until we have multiple containers
   end
 
   # POST /monitors
