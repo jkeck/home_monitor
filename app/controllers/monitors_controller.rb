@@ -28,7 +28,7 @@ class MonitorsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def monitor_params
-    params.fetch(:monitor, {}).permit(:moisture, :name, :temp)
+    params.fetch(:monitor, {}).permit(:moisture, :name, :temp, :light)
   end
 
   def monitor_type
